@@ -22,7 +22,7 @@
 
 <header class="header">
 
-   <a href="#" class="logo">ASOSE</a>
+   <a href="images/logo.png" class="logo">ASOSE</a>
 
    <nav class="navbar">
       <div id="close-navbar" class="fas fa-times"></div>
@@ -30,7 +30,7 @@
       <a href="about.html">about</a>
       <a href="student.html">Student</a>
       <a href="contact.html">contact</a>
-      <a href="courses.html">Course</a>
+      <a href="event.html">Event</a>
 
    </nav>
 
@@ -123,14 +123,15 @@
          <img src="images/contact-img.png" alt="">
       </div>
 
-      <form action="">
-         <h3>Get In Touch!</h3>
-         <input type="text" placeholder="name" class="box">
-         <input type="email" placeholder="email" class="box">
-         <input type="number" placeholder="phone" class="box">
-         <textarea name="" class="box" placeholder="message" id="" cols="30" rows="10"></textarea>
-         <input type="submit" value="send message" class="btn">
-      </form>
+      <form action="https://formspree.io/f/mkgnwdyj" method="POST">
+    <h3>Get In Touch!</h3>
+    <input type="text" name="name" placeholder="name" class="box" required>
+    <input type="email" name="email" placeholder="email" class="box" required>
+    <input type="number" name="phone" placeholder="phone" class="box" required>
+    <textarea name="message" class="box" placeholder="message" id="" cols="30" rows="10" required></textarea>
+    <input type="submit" value="send message" class="btn">
+</form>
+
 
    </div>
 
