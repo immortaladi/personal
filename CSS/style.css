@@ -1,22 +1,28 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Radley:ital@0;1&display=swap");
+
+/* Apply mysterious font */
 * {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Radley', sans-serif; /* Mysterious font */
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   outline: none;
   border: none;
   text-decoration: none;
-  -webkit-transition: all .2s linear;
   transition: all .2s linear;
 }
 
+/* Use 'Nunito' for non-mysterious sections */
+body, .content, .navbar a, .btn, .box h3, .credit {
+  font-family: 'Nunito', sans-serif;
+}
+
+
 img {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -webkit-user-select: smooth;
+     -moz-user-select: smooth;
+      -ms-user-select: smooth;
+          user-select: smooth;
 }
 
 html {
@@ -28,12 +34,91 @@ html::-webkit-scrollbar {
   width: 1rem;
 }
 
+.icons .fas, .share a {
+  transition: 0.3s;
+}
+
+.icons .fas:hover, .share a:hover {
+  color: #ff4757;
+  transform: scale(1.2);
+}
+
+.btn {
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+  background-color: #1abc9c;
+  transform: scale(1.1);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.swiper-slide {
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.swiper-slide:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+@keyframes slideLogo {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.logo-container .swiper-wrapper {
+  display: flex;
+  animation: slideLogo 15s linear infinite;
+}
+
+.swiper-slide {
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  transition: background-position 0.5s;
+}
+
+.swiper-slide:hover {
+  background-position: top;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+
+
+
+
+
 html::-webkit-scrollbar-track {
   background: transparent;
 }
 
 html::-webkit-scrollbar-thumb {
-  background: #0eb582;
+  background: #10375C;
 }
 
 section {
@@ -80,9 +165,9 @@ section {
   margin-top: 1rem;
   padding: 1rem 3rem;
   font-size: 1.8rem;
-  border: 0.1rem solid #0eb582;
+  border: 0.1rem solid #257180;
   background: #f0fdfa;
-  color: #0eb582;
+  color: #EC8305;
   cursor: pointer;
   text-transform: capitalize;
 }
